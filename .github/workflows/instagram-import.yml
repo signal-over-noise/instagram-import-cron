@@ -1,0 +1,15 @@
+name: Instagram Import Runner
+
+on:
+  schedule:
+    - cron: "*/1 * * * *" # every 5 minutes (change if needed)
+  workflow_dispatch: # allows manual trigger from GitHub UI
+
+jobs:
+  run-cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Instagram Importer
+        run: |
+          echo "Hitting importer URL..."
+          curl -s -o /dev/null -w "HTTP Code: %{http_code}\nTime: %{time_total}s\n" "https://or-studio.infy.uk/?run_instagram_import=1"
