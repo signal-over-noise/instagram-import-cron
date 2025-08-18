@@ -12,4 +12,4 @@ jobs:
       - name: Call Instagram Importer
         run: |
           echo "Hitting importer URL..."
-          curl -k --http1.0 --tls-max 1.2 -A "Mozilla/5.0" "https://or-studio.infy.uk/?run_instagram_import=1"
+          curl -k --http1.0 --tls-max 1.2 -A "Mozilla/5.0" "https://or-studio.co.uk/?run_instagram_import=1"
